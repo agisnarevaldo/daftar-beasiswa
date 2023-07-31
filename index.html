@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Beasiswa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="slides">
+    <!-- Slide 1 -->
+    <div class="slide" id="slide1">
+      <h2>Pilihan Beasiswa</h2>
+      <button onclick="showSlide('slide2')">Beasiswa A</button>
+      <button onclick="showSlide('slide2')">Beasiswa B</button>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+      <h2>Daftar Data Diri</h2>
+      <form id="formSlide2" onsubmit="return false;">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="noHP">No. HP:</label>
+        <input type="tel" id="noHP" required>
+
+        <label for="semester">Semester:</label>
+        <select id="semester" required>
+          <option value="">Pilih Semester</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <!-- Add more options up to 8 -->
+        </select>
+
+        <label for="ipkTerakhir">IPK Terakhir:</label>
+        <input type="number" step="0.01" id="ipkTerakhir" required>
+
+        <label for="pilihanBeasiswa">Pilihan Beasiswa:</label>
+        <select id="pilihanBeasiswa" required>
+          <option value="">Pilih Beasiswa</option>
+          <!-- Add options based on slide 1 selection -->
+        </select>
+
+        <label for="uploadBerkas">Upload Berkas Syarat:</label>
+        <input type="file" id="uploadBerkas" required>
+
+        <!-- <div class="buttons">
+          <button onclick="showSlide('slide1')">Kembali</button>
+          <button onclick="validateFormAndShowSlide('slide3')">Lanjut</button>
+        </div> -->
+
+        <!-- ... Kode form sebelumnya ... -->
+<div class="file-upload-container">
+  <label class="file-upload-button" for="uploadBerkas">Unggah Berkas</label>
+  <input type="file" id="uploadBerkas" class="file-upload-input" required>
+</div>
+<!-- ... Kode form selanjutnya ... -->
+
+      </form>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3">
+      <h2>Hasil Seleksi</h2>
+      <p id="hasilSeleksi"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
