@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Beasiswa</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="slides">
       <!-- Slide 1 -->
       <div class="slide" id="slide1">
-        <h2>Pilihan Beasiswa</h2>
-        <button onclick="showSlide('slide2')">Beasiswa Akademik</button>
-        <button onclick="showSlide('slide2')">Beasiswa Non Akademik</button>
+        <div class="header1">
+          <div class="judul">
+            <h1>Pendaftaran Beasiswa</h1>
+            <p>Menuju masa depan yang lebih baik</p>
+          </div>
+          <img class="logo" src="assets/Unper.png" style="width: 90px" alt="" />
+        </div>
+        <img src="assets/ill.png" alt="" />
+        <button class="btn-daftar" onclick="showSlide('slide2')">
+          Daftar Sekarang
+        </button>
+        <!-- <button onclick="showSlide('slide2')">Beasiswa Non Akademik</button> -->
       </div>
 
       <!-- Slide 2 -->
       <div class="slide" id="slide2">
-        <h2>Pendaftaran Beasiswa</h2>
+        <button class="btn-back" onclick="showSlide('slide1')">
+          <i class="material-icons">west</i>
+        </button>
+        <div class="header">
+          <h2>Formulir Pendaftaran Beasiswa</h2>
+        </div>
         <form id="formSlide2" onsubmit="return false;">
           <label for="nama">Nama:</label>
           <input name="nama" type="text" id="nama" required />
@@ -76,8 +94,12 @@
 
           <!-- ... Kode form sebelumnya ... -->
           <div class="buttons">
-            <button onclick="validateFormAndShowSlide('slide3')">Daftar</button>
-            <button onclick="showSlide('slide1')">Masuk</button>
+            <button
+              id="btn-daftar"
+              onclick="validateFormAndShowSlide('slide3')"
+            >
+              Ajukan Pendaftaran
+            </button>
           </div>
 
           <!-- ... Kode form selanjutnya ... -->
@@ -88,6 +110,7 @@
       <div class="slide" id="slide3">
         <h2>Hasil Seleksi</h2>
         <p id="hasilSeleksi"></p>
+        <img src="assets/success.gif" alt="not found" />
       </div>
     </div>
 

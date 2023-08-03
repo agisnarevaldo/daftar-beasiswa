@@ -13,12 +13,12 @@ function validateFormAndShowSlide(slideId) {
       document.getElementById("ipkTerakhir").value,
     );
     const hasilSeleksi = ipkTerakhir >= 3 ? "Diterima" : "Tidak Diterima";
-    document.getElementById(
-      "hasilSeleksi",
-    ).textContent = `Hasil Seleksi: ${hasilSeleksi}`;
+    const slideHasil = document.getElementById("hasilSeleksi");
+    slideHasil.textContent = `Hasil Seleksi: ${hasilSeleksi}`;
     showSlide(slideId);
   } else {
     // Form not valid, display error messages if needed
+    alert("Harap isi semua kolom yang diperlukan sebelum melanjutkan.");
   }
 }
 
