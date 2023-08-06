@@ -9,6 +9,11 @@ body {
   background-color: #f0f0f0;
 }
 
+#slide3 {
+  display: flex;
+  flex-direction: column;
+}
+
 .slides {
   width: 100%;
   max-width: 600px;
@@ -72,31 +77,41 @@ body {
   );
 }
 
-#slide2 > .header {
+.header {
   display: flex;
   align-items: center;
-  margin: 20px auto;
-  border-bottom: 2px solid black;
+  margin-bottom: 22px;
+  border-bottom: 2px solid rgb(14, 0, 247);
+  /* color: rgb(14, 0, 247); */
+  color: black;
   /* background: rgb(14, 0, 247); */
   padding: 10px 0;
 }
 
-#slide2 > .header > h2 {
+.header > h2 {
   text-align: center;
   width: 100%;
+  letter-spacing: 1px;
 }
 
-#slide2 > .header > .btn-back {
+#slide2 > .btn-back {
   background-color: white;
-  color: black;
+  padding: 0;
+  /* color: black; */
+  color: rgb(14, 0, 247);
   /* font-weight: bold; */
   /* font-size: 33px; */
   /* padding: 5px 10px; */
+}
+.material-icons {
+  font-weight: bold;
+  font-size: 33px;
 }
 
 #formSlide2 {
   display: flex;
   flex-direction: column;
+  /* margin-top: 22px; */
 }
 
 .buttons {
@@ -129,7 +144,7 @@ textarea {
   /* width: 400px; */
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(12, 117, 242, 1);
   border-radius: 5px;
 }
 
@@ -172,20 +187,23 @@ input[type="file"] {
 
 /* Tombol unggah berkas */
 .file-upload-container {
+  /* background: rgb(14, 0, 247); */
+  padding: 10px;
   position: relative;
   overflow: hidden;
   display: inline-block;
+  padding-left: 0;
 }
 
 .file-upload-button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background: rgb(14, 0, 247);
   color: #fff;
   font-size: 14px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
 }
 
 .file-upload-button:hover {
@@ -198,12 +216,64 @@ input[type="file"] {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  /* opacity: 0; */
   cursor: pointer;
+}
+.material-symbols-outlined {
+  position: relative;
+  top: 5px;
 }
 
 #btn-daftar {
   width: 100%;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: rgb(14, 0, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(14, 0, 247, 1) 0%,
+    rgba(19, 19, 255, 1) 50%,
+    rgba(12, 117, 242, 1) 100%
+  );
+  /* transition: background-color 0.3s ease; */
 }
 
-/* Kode CSS selanjutnya ... */
+#btn-daftar:hover {
+  background: #0056b3;
+  /* background: greenyellow; */
+}
+
+#dashboard > h2 {
+  text-align: center;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.content .left {
+  display: flex;
+  flex-direction: column;
+  /* font-size: 20px; */
+  justify-content: space-evenly;
+}
+
+@media print {
+  /* body * { */
+  /*   display: none; */
+  /* } */
+
+  /* .slides { */
+  /*   display: block; */
+  /* } */
+
+  /* dashboard { */
+  /*   position: absolute; */
+  /*   left: 0; */
+  /*   right: 0; */
+  /* } */
+
+  .no-print {
+    display: none;
+  }
+}
