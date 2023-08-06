@@ -49,4 +49,4 @@ function printCard() {
 }
 
 // Show the first slide by default
-showSlide("slide2");
+showSlide("slide1");

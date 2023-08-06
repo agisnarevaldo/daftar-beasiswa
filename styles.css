@@ -97,6 +97,7 @@ body {
 #slide2 > .btn-back {
   background-color: white;
   padding: 0;
+  text-align: left;
   /* color: black; */
   color: rgb(14, 0, 247);
   /* font-weight: bold; */
