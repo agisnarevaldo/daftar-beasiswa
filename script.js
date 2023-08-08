@@ -7,7 +7,7 @@ function showSlide(slideId) {
   slideToShow.style.flexDirection = "column";
 }
 
-function validateFormAndShowSlide(slideId) {
+function validateFormAndShowSlide() {
   const form = document.getElementById("formSlide2");
   if (form.checkValidity()) {
     const ipkTerakhir = parseFloat(
@@ -15,11 +15,17 @@ function validateFormAndShowSlide(slideId) {
     );
     const hasilSeleksi = ipkTerakhir >= 3 ? "Diterima" : "Tidak Diterima";
     const slideHasil = document.getElementById("hasilSeleksi");
-    slideHasil.textContent = `Hasil Seleksi: ${hasilSeleksi}`;
-    const slide3 = document.getElementById("slide3");
-    slide3.style.display = "flex";
-    slide3.style.flexDirection = "column";
-    showSlide(slideId);
+    if (ipkTerakhir >= 3) {
+      slideHasil.textContent = "Selamat Anda mendapatkan Beasiswa";
+      showSlide("slide3");
+    } else {
+      alert("Mohon maaf Anda belum memenuhi persyaratan");
+      showSlide("slide1");
+    }
+    // slideHasil.textContent = `Hasil Seleksi: ${hasilSeleksi}`;
+    // const slide3 = document.getElementById("slide3");
+
+    // showSlide(slideId);
   } else {
     // Form not valid, display error messages if needed
     alert("Harap isi semua kolom yang diperlukan sebelum melanjutkan.");

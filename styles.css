@@ -259,21 +259,13 @@ input[type="file"] {
   justify-content: space-evenly;
 }
 
+@media only screen and(max-width: 680px) {
+  .slides {
+    max-width: 335px;
+  }
+}
+
 @media print {
-  /* body * { */
-  /*   display: none; */
-  /* } */
-
-  /* .slides { */
-  /*   display: block; */
-  /* } */
-
-  /* dashboard { */
-  /*   position: absolute; */
-  /*   left: 0; */
-  /*   right: 0; */
-  /* } */
-
   .no-print {
     display: none;
   }
