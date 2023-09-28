@@ -1,5 +1,5 @@
-# daftar-beasiswa
+# Program Daftar Beasiswa
 
-Tugas Mata Kuliah IMK semester 4
-## Website Pendaftaran Beasiswa
+## Tugas Mata Kuliah IMK semester 4
+
 visit: https://daftar-beasiswa.netlify.app/
